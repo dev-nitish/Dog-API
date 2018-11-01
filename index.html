@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dog</title>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <button id="reload">Load Dog</button>
+
+    <script type="text/javascript">
+    	$("#reload").click(function(){
+
+    		let dogData = $.getJSON( 'https://dog.ceo/api/breeds/image/random' ,function(dogData){
+     		console.log( dogData);
+     		var dogImg = dogData.message;
+     		console.log( dogImg);
+     		
+
+     		$("#image").show("fast", function() {
+    		// Which anchor is being used?
+        	$(this).attr('src', dogImg)});
+        	});
+
+        	});
+
+        	// $("#reload").click(function(){
+        	// 	alert("Hello");
+        	// });
+
+    </script>
+    <!-- <script type="text/javascript">
+    	$("#reload").click(function(){
+        		alert("Hello");
+        	});
+    </script> -->
+
+    <div id="display">
+    	<img id="image" width="50%">
+    	
+    </div>
+    
+
+</body>
+
+</html>

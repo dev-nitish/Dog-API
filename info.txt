@@ -1,0 +1,5 @@
+In this file we are using api to fetch JSON data with random image links for dogs.
+We are displaying those images using click function without reloading the page.
+
+Used language: jQuery
+Date: 4 Aug 2018
